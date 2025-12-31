@@ -43,6 +43,7 @@ This project was developed as part of a **frontend engineering assignment**.
 
 ---
 ## 📁 Project Structure
+```bash
 src/
 ├── components/
 │ ├── WorkflowCanvas.jsx
@@ -62,7 +63,7 @@ src/
 ├── App.jsx
 ├── main.jsx
 └── styles.css
-
+```
 ---
 
 ---
