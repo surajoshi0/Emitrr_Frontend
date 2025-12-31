@@ -1,17 +1,78 @@
-# React + Vite
+# Visual Workflow Builder
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, interactive visual workflow builder built using **React (functional components)** and **JavaScript**, designed to demonstrate complex state management, component architecture, and custom UI development without relying on third-party UI or diagramming libraries.
 
-Currently, two official plugins are available:
+This project was developed as part of a **frontend engineering assignment**.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- 📌 Visual workflow canvas with a root **Start** node
+- 🧩 Support for multiple node types:
+  - **Action** – single sequential step
+  - **Branch (Condition)** – decision point with multiple paths
+  - **End** – terminal node
+- ➕ Add nodes dynamically using context-sensitive controls
+- ✏️ Edit node labels inline
+- ❌ Delete nodes with automatic parent-child reconnection
+- 🔄 Undo / Redo support for structural changes
+- 💾 Save workflow (logs complete JSON structure to console)
+- 🎨 Modern SaaS-style UI using pure CSS
+- 🌙 Glassmorphism, gradients, and subtle micro-interactions
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-# Emitrr_Frontend
+## 🧠 Technical Highlights
+
+- **Custom data modeling** using a normalized node graph structure
+- **Recursive rendering** of workflow nodes
+- **Manual undo/redo implementation** without external libraries
+- **Pure CSS styling** (no UI or animation libraries)
+- **Scalable component architecture**
+- **No workflow/diagramming libraries** (e.g., React Flow, GoJS)
+
+---
+
+## 🛠 Tech Stack
+
+- **React** (Functional Components + Hooks)
+- **JavaScript (ES6+)**
+- **Vite** (Build tool)
+- **CSS** (Custom, no frameworks)
+
+---
+## 📁 Project Structure
+src/
+├── components/
+│ ├── WorkflowCanvas.jsx
+│ ├── NodeRenderer.jsx
+│ ├── NodeCard.jsx
+│ ├── AddNodeMenu.jsx
+│ ├── Toolbar.jsx
+│ └── Footer.jsx
+│
+├── data/
+│ └── initialWorkflow.js
+│
+├── utils/
+│ ├── workflowHelpers.js
+│ └── historyHelpers.js
+│
+├── App.jsx
+├── main.jsx
+└── styles.css
+
+---
+
+---
+
+## 🚀 Getting Started
+```bash
+ 1. Install dependencies
+  npm install
+2. Start development server
+  npm run dev
+3. Build for production
+  npm run build
+```
